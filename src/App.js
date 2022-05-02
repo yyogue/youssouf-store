@@ -1,25 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home';
+import View from './components/View';
+import Cart from './components/Cart';
+import About from './components/About';
+import Contact from './components/Contact';
+import PageNotFound from './components/PageNotFound';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
+
 
 function App() {
+
+  const stylingComp = {
+    textDecoration: "none",
+    color: "white"
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <div className='navMain'>
+          <Link to="/" style={stylingComp}><h3 id='navTitle'>Youssouf's Store</h3></Link>
+          <div>
+            <ul className='navChild'>
+              <li><Link to='/home' style={stylingComp}>Home</Link></li>
+              <li><Link to='/contact' style={stylingComp}>Contact</Link></li>
+              <li><Link to='/about' style={stylingComp}>About</Link></li>
+              <li><Link to='/cart'>🛒</Link></li>
+            </ul>
+          </div>
+        </div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='*' element={<PageNotFound />} />
+          <Route path='/Contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/view/:id' element={<View />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+
+
+{/* <div className="App">
+<Home />
+</div> */}
