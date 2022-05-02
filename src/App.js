@@ -7,14 +7,18 @@ import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-
+// li:hover{
+//   color: aqua;
+//   text-decoration: aqua;
+// }
 
 function App() {
 
   const stylingComp = {
     textDecoration: "none",
-    color: "white"
+    color: "aqua",
 }
+
 
   return (
     <BrowserRouter>
