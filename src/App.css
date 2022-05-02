@@ -127,6 +127,17 @@ li{
   cursor: pointer;
 }
 
+#descDetail{
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+}
+
+#descId{
+  margin-bottom: 20px;
+}
+
 
 /* *** */
 

@@ -50,7 +50,7 @@ function View() {
                 </div>
             </div>
             <div>
-                <h1>Description: <h3>{api.description}</h3></h1>
+                <h1 id="descId">Description: </h1><p id="descDetail">{api.description}</p>
             </div>
         </div>
     )

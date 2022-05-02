@@ -10,8 +10,8 @@ function About() {
                 <h1 className="welcome">Welcome</h1>
             </div>
             <div>
-                <h3 className="welcome">Hi, my name is Youssouf Yogue and I wanted to build this project so that it can be among the one that I have on my resume
-                    to demonstrate my skills to the employer. In this project I used react hooks and css for styling plus a fake
+                <h3 className="welcome">Hi, my name is Youssouf Yogue and I wanted to build this responsive project so that it can be among the one that I have on my resume
+                    to demonstrate my skills to the employer to show what I am capable of and what I can bring in the company. In this project I used react hooks and css for styling plus a fake
                     store api on the internet and I used axios to fetch data.
                 </h3>
                 <h3 className="welcome">
