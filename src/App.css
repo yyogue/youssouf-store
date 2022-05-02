@@ -154,14 +154,24 @@ li{
 /* *** */
 
 
-/* About css */
 
-.welcome, .contact{
+/* contact css */
+
+.welcome{
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 50px;
   padding: 20px;
+}
+
+@media (min-width : 768px){
+  .contact, .welcome{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* ** */
