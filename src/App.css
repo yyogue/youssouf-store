@@ -175,3 +175,12 @@ li{
 }
 
 /* ** */
+
+
+/* About css */
+#gh{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* *** */

@@ -10,13 +10,11 @@ function About() {
                 <h1 className="welcome">Welcome</h1>
             </div>
             <div>
-                <h3 className="welcome">Hi, my name is Youssouf Yogue and I wanted to build this responsive project so that it can be among the one that I have on my resume
-                    to demonstrate my skills to the employer to show what I am capable of and what I can bring in the company. In this project I used react hooks and css for styling plus a fake
-                    store api on the internet and I used axios to fetch data.
+                <h3 className="welcome">Hi, my name is Youssouf Yogue and I built this project for my resume in order to demonstrate my skills and show what I bring to a company. In this project I used React, React Hooks and CSS for styling along with a fake store api and used axios to fetch data.
+.
                 </h3>
                 <h3 className="welcome">
-                    I am full a stack software engineer and I was graduated back in march 2022 from Per Scholas Coding BootCamp. Form there I learned how to be able to connect
-                    front and back end. Plus we build a couple project using C.R.U.D operation with SpringBoot and here's <a href="https://github.com/Yogue1997" target='_blank'>my gitub page</a>
+                I am full stack software engineer and I graduated in march 2022 from Per Scholas Coding Bootcamp. There I learned how work with the front and back end by building a couple of CRUD projects with SpringBoot.
                 </h3>
             </div>
         </div>
