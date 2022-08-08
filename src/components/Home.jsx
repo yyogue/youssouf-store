@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { ApiProvider } from "../context/Api";
 
 
 
@@ -8,32 +9,15 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
 
-    const url = "https://fakestoreapi.com/products"
+    const context = useContext(ApiProvider)
 
-    const [api, setApi] = useState([])
-    console.log(api);
+    const { api, setApi } = context
 
-    const navigate = useNavigate()
+    const { stylingComp } = context
 
+    // console.log(api);
 
-    const stylingComp = {
-        textDecoration: "none",
-        color: "black"
-    }
-
-
-
-    const fetch = () => {
-        axios.get(url)
-            .then((res) => {
-                setApi(res.data)
-            })
-    }
-
-    useEffect(() => {
-        fetch()
-    }, [])
-
+    
     return (
         <div className="homeProducts">
             {api.map(data =>

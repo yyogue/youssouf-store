@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Api from './context/Api';
 
 // li:hover{
 //   color: aqua;
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
+      <Api>
         <div className='navMain'>
           <Link to="/" style={stylingComp}><h3 id='navTitle'>Youssouf's Store</h3></Link>
           <div>
@@ -43,7 +44,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/view/:id' element={<View />} />
         </Routes>
-      </div>
+      </Api>
     </BrowserRouter>
   );
 }
