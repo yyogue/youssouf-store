@@ -45,7 +45,7 @@ function Cart() {
         </div>
 
     const empty =
-        <div>
+        <div className="cartEmp">
             <h1>The cart is empty</h1>
         </div>
 
