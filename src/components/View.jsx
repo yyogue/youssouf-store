@@ -1,10 +1,15 @@
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { ApiProvider } from "../context/Api";
+import { decrement, increment } from "../redux/counter/counterSlice";
 
 
 function View() {
+
+    const count = useSelector((state) => state.counter.count)
+
     const context = useContext(ApiProvider);
 
     const { cart, setCart, itemInCartContext } = context;
@@ -19,9 +24,11 @@ function View() {
 
     const [itemInCart, setItemIncart] = useState(itemInCartContext(id))
 
+    const dispatch = useDispatch()
+
     console.log("Imtem in cart", itemInCart);
 
-
+    console.log("count",count);
 
     const fetchData = () => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
@@ -35,17 +42,19 @@ function View() {
         // setShow(false)
         setItemIncart(true)
         setCart([...cart, api])
+        dispatch(increment())
     }
 
     const handleRemove = () => {
         // setShow(true)
         setItemIncart(false)
         setCart(cart.filter(c => c.id !== api.id))
+        dispatch(decrement())
     }
 
     useEffect(() => {
         fetchData()
-    }, [])
+    }, [id])
 
 
 

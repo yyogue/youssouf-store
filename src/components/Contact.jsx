@@ -7,10 +7,10 @@ function Contact () {
     return (
         <div className="contact">
             <div>
-            <h1 className="welcome">yousyogue@gmail.com</h1>
+            <a  className="welcome" href="mailto:yousyogue@gmail.com">yousyogue@gmail.com</a>
             </div>
             <div>
-                <h1 className="welcome"> +1 (859) 529 2930</h1>
+                <a  target="_blank" href="https://www.linkedin.com/in/youssouf-yogue/"><img src="https://180dc.org/wp-content/uploads/2020/01/Linkedin-logo-1-550x550-300x300.png" alt="" /></a>
             </div>
         </div>
     )

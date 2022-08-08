@@ -35,9 +35,7 @@ function Api({ children }) {
     const [cart, setCart] = useState([])
 
     const itemInCartContext = (id) =>{
-        const result = cart.filter((item) =>
-        item.id === id
-        )
+        const result = cart.filter((item) => item.id === Number(id));
         return result.length > 0 ?  true : false
     }
 

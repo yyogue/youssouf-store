@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Api from './context/Api';
+import { useSelector } from 'react-redux';
 
 // li:hover{
 //   color: aqua;
@@ -15,9 +16,15 @@ import Api from './context/Api';
 
 function App() {
 
+  const count = useSelector((state) => state.counter.count)
+
   const stylingComp = {
     textDecoration: "none",
     color: "aqua",
+}
+  const stylingCart = {
+    textDecoration: "none",
+    color: "white",
 }
 
 
@@ -31,7 +38,7 @@ function App() {
               <li><Link to='/home' style={stylingComp}>Home</Link></li>
               <li><Link to='/contact' style={stylingComp}>Contact</Link></li>
               <li><Link to='/about' style={stylingComp}>About</Link></li>
-              <li><Link to='/cart'>🛒</Link></li>
+              <li><Link to='/cart' style={stylingCart}>🛒{count}</Link></li>
             </ul>
           </div>
         </div>

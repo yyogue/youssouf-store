@@ -1,23 +1,67 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { ApiProvider } from "../context/Api";
+import { decrement, reset } from "../redux/counter/counterSlice";
 
 
-function Cart () {
+function Cart() {
 
     const contex = useContext(ApiProvider)
 
-    const {cart} = contex
+    const { cart, setCart } = contex
 
-    console.log("Cart data", cart);
+    const [total, setTotal] = useState()
 
-    return(
+    const dispatch = useDispatch()
+
+
+    useEffect(() => {
+        setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
+    } , [cart])
+
+
+
+
+    const handleRemove = () => {
+        // setShow(true)
+        dispatch(decrement())
+        setCart(cart.filter(c => !c))
+    }
+
+    console.log("Cart data from cart", cart.length);
+
+    const cartProduct =
+        <div className="homeProducts">
+            {cart.map(data =>
+                <div key={data.id} className="homeChild">
+                    <div key={data.id}>
+                        <p id="title">{data.title}</p>
+                        <img src={data.image} alt="" className="mainImage" />
+                    </div>
+                    <h3>Price : ${data.price}</h3>
+                    <button onClick={handleRemove}>Remove</button>
+                </div>
+            )}
+        </div>
+
+    const empty =
         <div>
-            <span style={{ fontSize: 30 }}>My cart</span>
-            <br />
-            <span style={{ fontSize: 30 }}>Total : $ Random</span>
-            <div className="homeProducts">
-                {}
-            </div>
+            <h1>The cart is empty</h1>
+        </div>
+
+        const isEmpty = () => {
+            dispatch(reset())
+            return empty
+        }
+
+    return (
+        <div>
+            <span style={{ fontSize: 30 }}>Total : $ {total}</span>
+            {cart <=0 ? 
+            isEmpty()
+            : 
+            cartProduct
+            }
         </div>
     )
 }
