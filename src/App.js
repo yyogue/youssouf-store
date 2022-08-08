@@ -8,11 +8,9 @@ import PageNotFound from './components/PageNotFound';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Api from './context/Api';
 import { useSelector } from 'react-redux';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from 'react-toastify';
 
-// li:hover{
-//   color: aqua;
-//   text-decoration: aqua;
-// }
 
 function App() {
 
@@ -52,6 +50,7 @@ function App() {
           <Route path='/view/:id' element={<View />} />
         </Routes>
       </Api>
+      <ToastContainer/>
     </BrowserRouter>
   );
 }
@@ -60,6 +59,3 @@ export default App;
 
 
 
-{/* <div className="App">
-<Home />
-</div> */}

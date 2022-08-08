@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 import { ApiProvider } from "../context/Api";
 import { decrement, reset } from "../redux/counter/counterSlice";
 
@@ -18,7 +19,6 @@ function Cart() {
     useEffect(() => {
         setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
     } , [cart])
-
 
 
 

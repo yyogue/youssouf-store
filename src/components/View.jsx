@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import { ApiProvider } from "../context/Api";
 import { decrement, increment } from "../redux/counter/counterSlice";
 
@@ -28,7 +29,7 @@ function View() {
 
     console.log("Imtem in cart", itemInCart);
 
-    console.log("count",count);
+    console.log("count", count);
 
     const fetchData = () => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
@@ -43,6 +44,15 @@ function View() {
         setItemIncart(true)
         setCart([...cart, api])
         dispatch(increment())
+        toast.success(`${api.title} has been added to the cart`, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
 
     const handleRemove = () => {
@@ -50,6 +60,15 @@ function View() {
         setItemIncart(false)
         setCart(cart.filter(c => c.id !== api.id))
         dispatch(decrement())
+        toast.warn(`${api.title} has been removed in the cart`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
 
     useEffect(() => {
