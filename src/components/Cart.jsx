@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { ApiProvider } from "../context/Api";
 import { decrement, reset } from "../redux/counter/counterSlice";
 
@@ -22,10 +22,10 @@ function Cart() {
 
 
 
-    const handleRemove = () => {
+    const handleRemove = (id) => {
         // setShow(true)
         dispatch(decrement())
-        setCart(cart.filter(c => !c))
+        setCart((cart) => cart.filter(item => item.id !== id))
     }
 
     console.log("Cart data from cart", cart.length);
@@ -39,7 +39,7 @@ function Cart() {
                         <img src={data.image} alt="" className="mainImage" />
                     </div>
                     <h3>Price : ${data.price}</h3>
-                    <button onClick={handleRemove}>Remove</button>
+                    <button onClick={() => handleRemove(data.id)}>Remove</button>
                 </div>
             )}
         </div>

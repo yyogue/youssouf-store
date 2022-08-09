@@ -22,7 +22,7 @@ function Home() {
         <div className="homeProducts">
             {api.map(data =>
                 <Link to={`/view/${data.id}`} style={stylingComp}>
-                    <div key={data.id} className='homeChild'>
+                    <div  className='homeChild'>
                         <div key={data.id}>
                             <p id="title">{data.title}</p>
                             <img src={data.image} className='mainImage' />
