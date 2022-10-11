@@ -1,3 +1,5 @@
+
+
 *{
   margin: 0;
   padding: 0;
@@ -11,7 +13,7 @@ button{
   display: flex;
   justify-content: space-between;
   padding: 40px;
-  border: 1px solid black;
+  border: 1px solid rgb(94, 133, 110);
   background-color: black;
 }
 

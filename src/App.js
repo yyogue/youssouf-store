@@ -1,4 +1,5 @@
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './components/Home';
 import View from './components/View';
 import Cart from './components/Cart';
@@ -10,6 +11,7 @@ import Api from './context/Api';
 import { useSelector } from 'react-redux';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
+import NavBar from './components/NavBar';
 
 
 function App() {
@@ -29,28 +31,18 @@ function App() {
   return (
     <BrowserRouter>
       <Api>
-        <div className='navMain'>
-          <Link to="/" style={stylingComp}><h3 id='navTitle'>Youssouf's Store</h3></Link>
-          <div>
-            <ul className='navChild'>
-              <li><Link to='/home' style={stylingComp}>Home</Link></li>
-              <li><Link to='/contact' style={stylingComp}>Contact</Link></li>
-              <li><Link to='/about' style={stylingComp}>About</Link></li>
-              <li><Link to='/cart' style={stylingCart}>🛒{count}</Link></li>
-            </ul>
-          </div>
-        </div>
+        <NavBar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='*' element={<PageNotFound />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/view/:id' element={<View />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/view/:id" element={<View />} />
         </Routes>
       </Api>
-      <ToastContainer/>
+      <ToastContainer />
     </BrowserRouter>
   );
 }
