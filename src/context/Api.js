@@ -11,7 +11,7 @@ function Api({ children }) {
 
     const [api, setApi] = useState([]);
 
-    const [theme, setTheme] = useState(false)
+    const [theme, setTheme] = useState(true)
 
     console.log(api);
 

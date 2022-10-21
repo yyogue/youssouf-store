@@ -29,21 +29,25 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <Api>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<PageNotFound />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/view/:id" element={<View />} />
-        </Routes>
-      </Api>
-      <ToastContainer />
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <modeContext>
+          <Api>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="*" element={<PageNotFound />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/view/:id" element={<View />} />
+            </Routes>
+          </Api>
+        </modeContext>
+        <ToastContainer />
+      </BrowserRouter>
+    </div>
   );
 }
 
