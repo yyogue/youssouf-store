@@ -19,6 +19,10 @@ body {
   background-color: var(--dark-primary);
 }
 
+.light-mode{
+  background-color: var(--light-fifth);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

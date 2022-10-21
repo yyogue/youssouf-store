@@ -11,7 +11,8 @@ function Api({ children }) {
 
     const [api, setApi] = useState([]);
 
-    const [theme, setTheme] = useState(true)
+    const [themeDark, setThemeDark] = useState(true)
+
 
     console.log(api);
 
@@ -42,7 +43,7 @@ function Api({ children }) {
 
 
     return (
-        <ApiProvider.Provider value={{ api, setApi, stylingComp, cart, setCart, theme, setTheme, itemInCartContext }}>
+        <ApiProvider.Provider value={{ api, setApi, stylingComp, cart, setCart, themeDark, setThemeDark, itemInCartContext }}>
             {children}
         </ApiProvider.Provider>
     )
