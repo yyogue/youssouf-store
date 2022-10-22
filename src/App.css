@@ -7,27 +7,7 @@
 button{
   cursor: pointer;
 }
-/* Nav css */
 
-.navMain{
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
-  border: 1px solid rgb(94, 133, 110);
-  background-color: black;
-}
-
-
-
-.navChild{
-  display: flex;
-  justify-content: space-between;
-}
-
-li{
-  margin: 0px 4px ;
-  list-style-type: none;
-}
 
 
 
@@ -36,12 +16,32 @@ li{
   display: block;
   padding: 32px;
 }
+.homeProductsDark{
+  display: block;
+  padding: 32px;
+  background-color: black;
+}
 
 @media (min-width : 768px) {
   .homeProducts{
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(4, 1fr);
+  }
+  /* .lessFour{
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 5px;
+  } */
+  .homeProductsDark{
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
   }
   li{
     margin-left: 20px;
@@ -63,6 +63,17 @@ li{
   justify-content: center;
   text-align: center;
   align-items: center;
+  border-radius: 10px;
+}
+.homeChildDark{
+  /* background-color: rgb(31, 46, 25); */
+  border: solid 1px white;
+  margin-bottom: 16px;
+  padding: 16px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
 }
 /* .homeProducts{
   display: flex;
@@ -116,13 +127,28 @@ li{
 
 .viewCont{
   margin: 20px 20px;
+  height: 100vh;
+}
+.viewContDark{
+  padding: 20px 20px;
+  background-color: black;
+  height: 100vh;
+  width: auto;
+  color: white;
+}
+.topViewDark{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
 }
 .topView{
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  margin: 50px;
+  padding: 50px;
 }
 
 #cross{
@@ -194,4 +220,19 @@ li{
   align-items: center;
   text-align: center;
   margin: 100px;
+}
+.cartEmpDark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 100px;
+  background-color: black;
+  color: white;
+}
+
+.darkReturn{
+  height: 100vh;
+  background-color: black;
+  color: white;
 }

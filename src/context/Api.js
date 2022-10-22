@@ -25,10 +25,7 @@ function Api({ children }) {
         fetch();
     }, []);
 
-    const stylingComp = {
-        textDecoration: "none",
-        color: "black",
-    };
+
 
 
 
@@ -42,7 +39,7 @@ function Api({ children }) {
 
 
     return (
-        <ApiProvider.Provider value={{ api, setApi, stylingComp, cart, setCart, theme, setTheme, itemInCartContext }}>
+        <ApiProvider.Provider value={{ api, setApi, cart, setCart, theme, setTheme, itemInCartContext }}>
             {children}
         </ApiProvider.Provider>
     )
