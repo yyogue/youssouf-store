@@ -1,10 +1,22 @@
+:root{
+  --dark-primary: #000;
+  --dark-secondary: rgb(37, 9, 9);
+  --dark-third: rgb(29, 23, 23);
+  --dark-fourth: rgb(21, 5, 5);
+  --dark-fifth: #000;
+  
+  --light-primary: #edede9;
+  --light-secondary: #dede61;
+  --light-third: #464633;
+  --light-fourth: #edede9;
+  --light-fifth: #b0ae0f;
+}
+
+
+
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark-primary);
 }
 
 code {
