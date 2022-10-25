@@ -4,15 +4,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { ApiProvider } from "../context/Api";
 
 function Home() {
-  const context = useContext(ApiProvider);
-
-  const { api, setApi, theme } = context;
-
+  
   const stylingComp = {
     textDecoration: "none",
     color: "black",
   };
-
+  
+  const context = useContext(ApiProvider);
+  
+  const { api, setApi, theme } = context;
+  
   function mode () {
     const light = {
       textDecoration: "none",
