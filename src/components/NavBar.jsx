@@ -21,11 +21,15 @@ function NavBar() {
   const light = {
     padding: "40px",
     backgroundColor: "#4cc9f0",
+    fontFamily: "Oswald",
+    fontWeight: '100px'
   };
   const dark = {
     padding: "40px",
     backgroundColor: "#001236",
     color: "white",
+    fontFamily: "Oswald",
+    fontWeight: "100px",
   };
   return theme ? light : dark
   }
@@ -48,19 +52,50 @@ function NavBar() {
 
   return (
     <div>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+      </style>
       <Navbar collapseOnSelect expand="lg" style={mode()}>
         <Container>
           <Navbar.Brand style={theme ? { color: "black" } : { color: "white" }}>
-            <Link to="/" style={ theme? { textDecoration: "none", color: "black" } : { textDecoration: "none", color: "white" } }>Youssouf's Store</Link>
+            <Link
+              to="/"
+              style={
+                theme
+                  ? { textDecoration: "none", color: "black" }
+                  : { textDecoration: "none", color: "white" }
+              }
+            >
+              Youssouf's Store
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link style={theme ? { color: "black" } : { color: "white" }}>
-                <Link to="/contact" style={ theme? { textDecoration: "none", color: "black" } : { textDecoration: "none", color: "white" } }>Contact</Link>
+                <Link
+                  to="/contact"
+                  style={
+                    theme
+                      ? { textDecoration: "none", color: "black" }
+                      : { textDecoration: "none", color: "white" }
+                  }
+                >
+                  Contact
+                </Link>
               </Nav.Link>
               <Nav.Link style={theme ? { color: "black" } : { color: "white" }}>
-                <Link to="/about" style={ theme? { textDecoration: "none", color: "black" } : { textDecoration: "none", color: "white" } } >About</Link>
+                <Link
+                  to="/about"
+                  style={
+                    theme
+                      ? { textDecoration: "none", color: "black" }
+                      : { textDecoration: "none", color: "white" }
+                  }
+                >
+                  About
+                </Link>
               </Nav.Link>
             </Nav>
             <Nav>
@@ -69,7 +104,16 @@ function NavBar() {
                 eventKey={2}
                 href="#memes"
               >
-                <Link to='/cart' style={ theme? { textDecoration: "none", color: "black" } : { textDecoration: "none", color: "white" } } >Cart {count}</Link>
+                <Link
+                  to="/cart"
+                  style={
+                    theme
+                      ? { textDecoration: "none", color: "black" }
+                      : { textDecoration: "none", color: "white" }
+                  }
+                >
+                  Cart {count}
+                </Link>
               </Nav.Link>
               {theme ? (
                 <Nav.Link onClick={() => setTheme(false)}>☀️</Nav.Link>
