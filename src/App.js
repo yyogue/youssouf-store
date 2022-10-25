@@ -1,4 +1,5 @@
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Home from './components/Home';
 import View from './components/View';
 import Cart from './components/Cart';
@@ -6,45 +7,47 @@ import About from './components/About';
 import Contact from './components/Contact';
 import PageNotFound from './components/PageNotFound';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Api from './context/Api';
+import { useSelector } from 'react-redux';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from 'react-toastify';
+import NavBar from './components/NavBar';
 
-// li:hover{
-//   color: aqua;
-//   text-decoration: aqua;
-// }
 
 function App() {
+
+  const count = useSelector((state) => state.counter.count)
 
   const stylingComp = {
     textDecoration: "none",
     color: "aqua",
 }
+  const stylingCart = {
+    textDecoration: "none",
+    color: "white",
+}
 
 
   return (
-    <BrowserRouter>
-      <div>
-        <div className='navMain'>
-          <Link to="/" style={stylingComp}><h3 id='navTitle'>Youssouf's Store</h3></Link>
-          <div>
-            <ul className='navChild'>
-              <li><Link to='/home' style={stylingComp}>Home</Link></li>
-              <li><Link to='/contact' style={stylingComp}>Contact</Link></li>
-              <li><Link to='/about' style={stylingComp}>About</Link></li>
-              <li><Link to='/cart'>🛒</Link></li>
-            </ul>
-          </div>
-        </div>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='*' element={<PageNotFound />} />
-          <Route path='/Contact' element={<Contact />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/view/:id' element={<View />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <modeContext>
+          <Api>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="*" element={<PageNotFound />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/view/:id" element={<View />} />
+            </Routes>
+          </Api>
+        </modeContext>
+        <ToastContainer />
+      </BrowserRouter>
+    </div>
   );
 }
 
@@ -52,6 +55,3 @@ export default App;
 
 
 
-{/* <div className="App">
-<Home />
-</div> */}
