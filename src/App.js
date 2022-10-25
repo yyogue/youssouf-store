@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
 import NavBar from './components/NavBar';
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/view/:id" element={<View />} />
             </Routes>
+            <Footer/>
           </Api>
         </modeContext>
         <ToastContainer />

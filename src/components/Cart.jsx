@@ -109,7 +109,7 @@ function Cart() {
   }
 
   return (
-    <div className={theme ? "" : "darkReturn"}>
+    <div className={theme ? "return" : "darkReturn"}>
       <span style={{ fontSize: 30 }}>Total : $ {total}</span>
       {/* {cart <= 0 ? isEmpty() : cartProduct } */}
       { cartItem(cart) }

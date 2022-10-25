@@ -24,12 +24,12 @@ function Contact () {
     return (
         <>
         {theme ? (
-          <>
+          <div className="return">
             <div className="welcome">
               <h1><a  href="mailto:yousyogue@gmail.com" style={ mode() }>yousyogue@gmail.com</a></h1>
               <a  target="_blank" href="https://www.linkedin.com/in/youssouf-yogue/"><img src="https://180dc.org/wp-content/uploads/2020/01/Linkedin-logo-1-550x550-300x300.png" alt="" className="linkedin-img"/></a>
             </div>
-          </>
+          </div>
         ) : (
             <div className="contact-dark">
             <div className="welcome">
