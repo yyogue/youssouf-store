@@ -71,20 +71,26 @@ function View() {
     });
   };
 
+  const [loading, setLoading] = useState(false);
+
+  const [color, setColor] = useState('red')
+
+  function loaderColor() {
+    return theme ? setColor('red') : setColor('#edf2f4')
+  }
+
   useEffect(() => {
     fetchData();
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
     }, 2000)
+    loaderColor()
   }, [id]);
 
-  const [loading, setLoading] = useState(false);
-
-  const [color, setColor] = useState('red')
 
   const load = (
-    <div style={{ display:'flex', justifyContent:'center', alignItems: 'center', textAlign:'center', height:'80vh'}}>
+    <div className={theme ? '' : 'load'} style={{ display:'flex', justifyContent:'center', alignItems: 'center', textAlign:'center', height:'80vh'}}>
       <BeatLoader size={20} color={color}/>
     </div>
   )
