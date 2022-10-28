@@ -5,6 +5,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ApiProvider } from "../context/Api";
 import { decrement, increment } from "../redux/counter/counterSlice";
+import { TabTitle } from "../utils/GeneralFunction";
+import { BeatLoader, ClipLoader } from 'react-spinners'
 
 function View() {
   const count = useSelector((state) => state.counter.count);
@@ -22,6 +24,8 @@ function View() {
   const [api, setApi] = useState([]);
 
   const [itemInCart, setItemIncart] = useState(itemInCartContext(id));
+
+  TabTitle(`${api.title}`)
 
   const dispatch = useDispatch();
 
@@ -69,11 +73,21 @@ function View() {
 
   useEffect(() => {
     fetchData();
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
   }, [id]);
 
-  // console.log("Cart", cart);
-  // console.log("Api View", api);
-  // console.log("Cart Includes", cart.includes(api));
+  const [loading, setLoading] = useState(false);
+
+  const [color, setColor] = useState('red')
+
+  const load = (
+    <div style={{ display:'flex', justifyContent:'center', alignItems: 'center', textAlign:'center', height:'80vh'}}>
+      <BeatLoader size={20} color={color}/>
+    </div>
+  )
 
   const singleProduct = theme ? (
     <div className="viewCont">
@@ -131,7 +145,15 @@ function View() {
     </div>
   );
 
-  return <div>{singleProduct}</div>;
+  return (
+    <>
+    {
+      loading ?
+      load :
+      singleProduct
+    }
+    </>
+  )
 }
 
 export default View;

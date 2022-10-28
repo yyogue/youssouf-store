@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { ApiProvider } from "../context/Api";
+import { TabTitle } from "../utils/GeneralFunction";
 
 
 
 function Contact () {
+
+  TabTitle('Contact')
 
       const context = useContext(ApiProvider);
 
