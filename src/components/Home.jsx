@@ -68,7 +68,12 @@ function Home() {
 
 
   const [loading, setLoading] = useState(false);
+
   const [color, setColor] = useState("#0077b6")
+  
+  function loaderColor () {
+    return theme ? setColor("#0077b6") : setColor('#e5e5e5')
+  }
 
   function top (){
     return loading ? <ClipLoader /> : 'Home'
@@ -81,10 +86,11 @@ function Home() {
     setTimeout(() => {
       setLoading(false)
     }, 1000)
+    loaderColor();
   }, [])
 
   const load = (
-    <div style={{ display:'flex', justifyContent:'center', alignItems: 'center', textAlign:'center', height:'80vh'}}>
+    <div className={theme ? '' : 'load'}  style={{ display:'flex', justifyContent:'center', alignItems: 'center', textAlign:'center', height:'80vh'}}>
       <BarLoader size={100} color={color}/>
     </div>
   )
