@@ -1,11 +1,23 @@
 import React from 'react';
 import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer, CDBBox } from 'cdbreact';
 import { Link } from 'react-router-dom';
+import { ApiProvider } from '../context/Api';
+import { useContext } from 'react';
 // CDBBox
 
 export const Footer = () => {
+
+  const context = useContext(ApiProvider);
+
+  const { theme } = context;
+
+  function style () {
+    return theme ? 'shadow footer' : 'shadow footer-black'
+  }
+
+
   return (
-    <CDBFooter className="shadow">
+    <CDBFooter className={style()}>
       <CDBBox
         display="flex"
         justifyContent="between"
@@ -15,7 +27,7 @@ export const Footer = () => {
       >
         <CDBBox display="flex" alignItems="center">
           <a className="d-flex align-items-center p-0 text-dark" style={{ textDecoration: "none" }}>
-            <span className="ml-4 h5 mb-0 font-weight-bold">Youssouf's Store</span>
+            <span className={`ml-4 h5 mb-0 font-weight-bold ${style()}`}>Youssouf's Store</span>
           </a>
         </CDBBox>
         <CDBBox>

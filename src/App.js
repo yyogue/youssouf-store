@@ -44,8 +44,8 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/view/:id" element={<View />} />
             </Routes>
+            <Footer/>
           </Api>
-          <Footer/>
         </modeContext>
         <ToastContainer />
       </BrowserRouter>
