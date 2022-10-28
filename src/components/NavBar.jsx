@@ -116,9 +116,9 @@ function NavBar() {
                 </Link>
               </Nav.Link>
               {theme ? (
-                <Nav.Link onClick={() => setTheme(false)}>☀️</Nav.Link>
+                <Nav.Link onClick={() => setTheme(false)}>🌙</Nav.Link>
               ) : (
-                <Nav.Link onClick={() => setTheme(true)}>🌙</Nav.Link>
+                <Nav.Link onClick={() => setTheme(true)}>🌞</Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>
