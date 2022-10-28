@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { createContext, useState, useEffect } from 'react'
 
-
 export const ApiProvider = createContext("")
 
 

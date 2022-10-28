@@ -1,7 +1,11 @@
 import { useContext } from "react";
 import { ApiProvider } from "../context/Api";
+import { TabTitle } from "../utils/GeneralFunction";
 
 function About() {
+
+  TabTitle('About')
+
   const context = useContext(ApiProvider);
 
   const { theme } = context;
