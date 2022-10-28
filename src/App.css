@@ -31,7 +31,7 @@ button{
     grid-template-columns: repeat(4, 1fr);
     font-family: 'Quicksand', sans-serif;
   }
-  /* .lessFour{
+  .lessFour , .lessFourDark {
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(4, 1fr);
@@ -39,7 +39,7 @@ button{
     justify-content: center;
     justify-content: space-around;
     margin: 5px;
-  } */
+  }
   .homeProductsDark{
     display: grid;
     grid-gap: 16px;
@@ -285,4 +285,13 @@ button{
   height: 100vh;
   background-color: white;
   color: black;
+}
+
+.footer{
+  background-color: #dee2e6;
+}
+
+.footer-black{
+  background-color: #212529;
+  color: #dee2e6;
 }

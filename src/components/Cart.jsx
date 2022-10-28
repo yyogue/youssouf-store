@@ -5,9 +5,9 @@ import { ApiProvider } from "../context/Api";
 import { decrement, reset } from "../redux/counter/counterSlice";
 
 function Cart() {
-  const contex = useContext(ApiProvider);
+  const context = useContext(ApiProvider);
 
-  const { cart, setCart, theme } = contex;
+  const { cart, setCart, theme } = context;
 
   const [total, setTotal] = useState();
 
@@ -96,23 +96,19 @@ function Cart() {
     return empty;
   };
 
-  function lessThanZero () {
-    return cart <= 0 ? isEmpty() : cartProduct
-  }
 
   function lessThanFour () {
-    return cart > 1 && cart < 4 ? cartLessThanFour : cartProduct
+    return  cart <= 4 ? cartLessThanFour : cartProduct
   }
 
-  function cartItem (num) {
-    return num <= 0 ? lessThanZero() : lessThanFour()
+  function cartItem () {
+    return cart <= 0 ? isEmpty() : lessThanFour()
   }
 
   return (
     <div className={theme ? "return" : "darkReturn"}>
       <span style={{ fontSize: 30 }}>Total : $ {total}</span>
-      {/* {cart <= 0 ? isEmpty() : cartProduct } */}
-      { cartItem(cart) }
+      {cart <= 0 ? isEmpty() : cartProduct }
     </div>
   );
 }
