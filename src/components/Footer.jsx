@@ -41,7 +41,7 @@ export const Footer = () => {
           <a target="_blank" href="https://www.linkedin.com/in/youssouf-yogue/" style={{ textDecoration: "none", color: "white" }}><CDBIcon fab icon="linkedin" /></a>
           </CDBBtn>
           <CDBBtn flat color="dark" className="p-2">
-          <a target="_blank" href="https://www.instagram.com/youssoufyogue/" style={{ textDecoration: "none", color: "white" }}><CDBIcon fab icon="instagram" /></a>
+          <a target="_blank" href="https://www.instagram.com/yyogue/" style={{ textDecoration: "none", color: "white" }}><CDBIcon fab icon="instagram" /></a>
           </CDBBtn>
         </CDBBox>
       </CDBBox>
