@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Youssouf Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Welcome to Youssouf Store! This marks my inaugural venture into React.js, and I created this project in late 2021. I've crafted a responsive web application by harnessing the capabilities of various technologies and libraries. The project dynamically displays products fetched from the [Fake Store API](https://fakestoreapi.com/products).
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+To run this project locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Yogue1997/youssouf-store.git
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Navigate to the project directory:**
+   ```bash
+   cd youssouf-store
+   ```
 
-### `npm test`
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Run the development server:**
+   ```bash
+   npm start
+   ```
 
-### `npm run build`
+   The application will be accessible at `http://localhost:3000` in your web browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **@reduxjs/toolkit**: A set of utilities for managing the state of your React application.
+- **axios**: A promise-based HTTP client for making requests to the Fake Store API.
+- **bootstrap**: A popular CSS framework for building responsive and mobile-first websites.
+- **cdbreact**: A library that provides Bootstrap components as React components.
+- **react**: A JavaScript library for building user interfaces.
+- **react-bootstrap**: React components that add Bootstrap styling to your application.
+- **react-dom**: Provides DOM-specific methods that can be used at the top level of a web application.
+- **react-redux**: The official React bindings for Redux, a state management library.
+- **react-router-dom**: Routing library for React applications.
+- **react-scripts**: A set of scripts and configuration used by Create React App.
+- **react-spinners**: A collection of loading spinners with React integration.
+- **react-toastify**: A React notification library.
+- **web-vitals**: Provides tools for measuring web vitals.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Scripts
 
-### `npm run eject`
+- **start**: Run the development server using `react-scripts`.
+- **build**: Build the production-ready application using `react-scripts`.
+- **test**: Run tests using `react-scripts`.
+- **eject**: Eject from `react-scripts`, this is a one-way operation and should be approached with caution.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **eslintConfig**: Extends the default configurations for ESLint, including those for React and Jest.
+- **browserslist**: Specifies the browsers supported during development and in production.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Hosting
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project has already been hosted on [Netlify](https://youssoufstore.com/). Feel free to visit [Youssouf Store](https://youssoufstore.com/) and explore the world of products it offers.
 
-## Learn More
+## Note
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Youssouf Store is powered by the [Fake Store API](https://fakestoreapi.com/products) to display product data. It is continuously updated, and you can find the most recent projects and updates in my [GitHub repositories](https://github.com/Yogue1997?tab=repositories).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore, contribute, and provide feedback! If you have any questions, you can reach out to me through GitHub. Enjoy shopping at Youssouf Store!
