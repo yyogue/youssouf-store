@@ -64,6 +64,6 @@ This project has already been hosted on [Netlify](https://youssoufstore.com/). F
 
 ## Note
 
-Youssouf Store is powered by the [Fake Store API](https://fakestoreapi.com/products) to display product data. It is continuously updated, and you can find the most recent projects and updates in my [GitHub repositories](https://github.com/Yogue1997?tab=repositories).
+Youssouf Store is powered by the [Fake Store API](https://fakestoreapi.com/products) to display product data. It is continuously updated, and you can find the most recent projects and updates in my [GitHub repositories](https://github.com/yyogue?tab=repositories).
 
 Feel free to explore, contribute, and provide feedback! If you have any questions, you can reach out to me through GitHub. Enjoy shopping at Youssouf Store!
