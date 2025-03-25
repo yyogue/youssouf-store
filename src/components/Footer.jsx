@@ -35,7 +35,7 @@ export const Footer = () => {
         </CDBBox>
         <CDBBox display="flex">
           <CDBBtn flat color="dark" className="p-2">
-            <a target="_blank" href="https://github.com/yyogue" style={{ textDecoration: "none", color: "white" }}><CDBIcon fab icon="github" /></a>
+            <a target="_blank" href="https://github.com/yyogue/youssouf-store" style={{ textDecoration: "none", color: "white" }}><CDBIcon fab icon="github" /></a>
           </CDBBtn>
           <CDBBtn flat color="dark" className="mx-3 p-2">
           <a target="_blank" href="https://www.linkedin.com/in/youssouf-yogue/" style={{ textDecoration: "none", color: "white" }}><CDBIcon fab icon="linkedin" /></a>
